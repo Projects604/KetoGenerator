@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Chelsea Market' rel='stylesheet'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<style>
+body,
+button {
+  background: #f1f1f1;
+  font-family: 'Chelsea Market';
+  font-size: 32px;
+} 
+.parent {
+  position: relative;
+  height: 100vh;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+}
+p {
+  margin: auto;
+  text-align: center;
+}
+.h1 {
+  font-size: 44px;
+}
+button {
+  background: #cc4125;
+    border-radius: 6px;
+    width: 150px;
+    height: 35px;
+    font-size: 20px;
+    border: 1px solid #000;
+}
+
+.nav div {
+  height: 4px;
+  background-color: white;
+  margin: 5px 0px;
+  border-radius: 25px;
+  transition: 0.3s;
+
+}
+
+.dropbtn {
+  background-color: #cc4125;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: white;
+}
+
+.dropdown {
+  float: right;
+  position: relative;
+  display: block;
+  z-index: 9999 !important;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;} 
+
+.show {display: block;}
+</style>
+</head>
+<body>
+
+  
+
+  <script>
+
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+      console.log("myfunc");
+    }
+    
+    $("#btnClick").on("click",function(){
+      console.log("myclick");
+        // var dropdowns = document.getElementsByClassName("dropdown-content");
+        // var i;
+        // for (i = 0; i < dropdowns.length; i++) {
+        //   var openDropdown = dropdowns[i];
+        //   if (openDropdown.classList.contains('show')) {
+        //     openDropdown.classList.remove('show');
+        //   }
+        // }
+    })
+  
+
+    
+    var recipes =[
+  {
+    "ID": 1001,
+    "NAME": "3-cheese chicken and cauliflower lasagne",
+    "IMAGE LINK": "https://img.taste.com.au/d3DQWKOC/w720-h480-cfill-q80/taste/2018/12/3-cheese-chicken-and-cauliflower-lasagne-145713-2.jpg",
+    "RECIPE LINK": "https://www.taste.com.au/recipes/3-cheese-chicken-cauliflower-lasagne-recipe/2zl75fb4?r=recipes/ketodinnerrecipes&c=xfejcnw5/Keto%20dinner%20recipes",
+    "DESCRIPTION": "Combine cauliflower, parmesan and eggs to make this delicious gluten-free, keto-friendly lasagne recipe.",
+    "": "",
+    "__1": "",
+    "__2": "",
+    "__3": "",
+    "__4": "",
+    "__5": "",
+    "__6": "",
+    "__7": "",
+    "__8": "",
+    "__9": "",
+    "__10": "",
+    "__11": "",
+    "__12": "",
+    "__13": "",
+    "__14": "",
+    "__15": "",
+    "__16": "",
+    "__17": "",
+    "__18": "",
+    "__19": "",
+    "__20": ""
+  },
+  {
+    "ID": 1002,
+    "NAME": "Keto Pancakes",
+    "IMAGE LINK": "https://img.taste.com.au/UtVKUW75/w643-h428-cfill-q90/taste/2019/02/keto-pancakes-146734-1.jpg",
+    "RECIPE LINK": "https://www.taste.com.au/recipes/keto-pancakes-recipe/ftzlzvu5",
+    "DESCRIPTION": "Combine almond meal, cream cheese, 3 rggs, vanilla extract, baking powder, melted butter, chopped pistachios, rasberries",
+    "": "",
+    "__1": "",
+    "__2": "",
+    "__3": "",
+    "__4": "",
+    "__5": "",
+    "__6": "",
+    "__7": "",
+    "__8": "",
+    "__9": "",
+    "__10": "",
+    "__11": "",
+    "__12": "",
+    "__13": "",
+    "__14": "",
+    "__15": "",
+    "__16": "",
+    "__17": "",
+    "__18": "",
+    "__19": "",
+    "__20": ""
+  },
+  {
+    "ID": 1003,
+    "NAME": "Keto garlic bread recipe",
+    "IMAGE LINK": "https://img.taste.com.au/bF7iAbb5/w643-h428-cfill-q90/taste/2019/02/keto-garlic-bread-147525-1.jpg",
+    "RECIPE LINK": "https://www.taste.com.au/recipes/keto-garlic-bread-recipe/rzqlztj8",
+    "DESCRIPTION": "Combine instant dried yeast, pouring cream, warm water, almond meal, psyllium husk, ground flaxseed, baking powder, table salt, lightly whisked eggs, olive oil, apple ciderand finely chopped garlic. Shredded mozzarella cheese, parsley",
+    "": "",
+    "__1": "",
+    "__2": "",
+    "__3": "",
+    "__4": "",
+    "__5": "",
+    "__6": "",
+    "__7": "",
+    "__8": "",
+    "__9": "",
+    "__10": "",
+    "__11": "",
+    "__12": "",
+    "__13": "",
+    "__14": "",
+    "__15": "",
+    "__16": "",
+    "__17": "",
+    "__18": "",
+    "__19": "",
+    "__20": ""
+  },
+  {
+    "ID": 1004,
+    "NAME": "Keto swedish meat balls",
+    "IMAGE LINK": "https://img.taste.com.au/qYOWwSRS/w720-h480-cfill-q80/taste/2020/01/keto-swedish-meatballs-157002-2.jpg",
+    "RECIPE LINK": "https://www.taste.com.au/recipes/keto-swedish-meatballs-recipe/x54jfqd3",
+    "DESCRIPTION": "Combine the beef, egg, shallot, parsley, garlic, allspice and nutmeg in a large bowl. Season well. Roll tablespoonfuls of the mixture into balls.",
+    "": "",
+    "__1": "",
+    "__2": "",
+    "__3": "",
+    "__4": "",
+    "__5": "",
+    "__6": "",
+    "__7": "",
+    "__8": "",
+    "__9": "",
+    "__10": "",
+    "__11": "",
+    "__12": "",
+    "__13": "",
+    "__14": "",
+    "__15": "",
+    "__16": "",
+    "__17": "",
+    "__18": "",
+    "__19": "",
+    "__20": ""
+  },
+  {
+    "ID": 1005,
+    "NAME": "Keto Chicken parmi bowl",
+    "IMAGE LINK": "https://img.taste.com.au/pSiQbaG-/w720-h480-cfill-q80/taste/2019/02/keto-chicke-parmi-bake-147529-1.jpg",
+    "RECIPE LINK": "https://www.taste.com.au/recipes/keto-chicken-parmi-bowl-recipe/2wolshvv",
+    "DESCRIPTION": "Combine the almond meal, parmesan and parsley on a plate. Season the chicken. Dip 1 chicken piece in the egg, then into the almond meal mixture, pressing to coat. Transfer to a lined tray. Repeat with the remaining chicken, egg and almond meal mixture.",
+    "": "",
+    "__1": "",
+    "__2": "",
+    "__3": "",
+    "__4": "",
+    "__5": "",
+    "__6": "",
+    "__7": "",
+    "__8": "",
+    "__9": "",
+    "__10": "",
+    "__11": "",
+    "__12": "",
+    "__13": "",
+    "__14": "",
+    "__15": "",
+    "__16": "",
+    "__17": "",
+    "__18": "",
+    "__19": "",
+    "__20": ""
+  },
+  {
+    "ID": 1006,
+    "NAME": "Keto taco shells",
+    "IMAGE LINK": "https://img.taste.com.au/AiLOlxE_/w720-h480-cfill-q80/taste/2019/05/keto-taco-shells-149899-1.jpg",
+    "RECIPE LINK": "https://www.taste.com.au/recipes/keto-taco-shells-recipe/q1cnkg68",
+    "DESCRIPTION": "Combine baby spinach leaves, eggs, almond meal, psyllilum husk,and salt.",
+    "": "",
+    "__1": "",
+    "__2": "",
+    "__3": "",
+    "__4": "",
+    "__5": "",
+    "__6": "",
+    "__7": "",
+    "__8": "",
+    "__9": "",
+    "__10": "",
+    "__11": "",
+    "__12": "",
+    "__13": "",
+    "__14": "",
+    "__15": "",
+    "__16": "",
+    "__17": "",
+    "__18": "",
+    "__19": "",
+    "__20": ""
+  },
+  {
+    "ID": 1007,
+    "NAME": "Easy Keto Chicken Chow Mein",
+    "IMAGE LINK": "https://img.taste.com.au/wo2TpsDr/w720-h480-cfill-q80/taste/2020/01/easy-keto-chicken-chow-mein-157004-2.jpg",
+    "RECIPE LINK": "https://www.taste.com.au/recipes/easy-keto-chicken-chow-mein-recipe/rm79vhwi",
+    "DESCRIPTION": "Heat half the peanut oil in a large wok over high heat. Stir-fry half the chicken for 2-3 minutes or until golden. Transfer to a plate. Repeat with remaining chicken.",
+    "": "",
+    "__1": "",
+    "__2": "",
+    "__3": "",
+    "__4": "",
+    "__5": "",
+    "__6": "",
+    "__7": "",
+    "__8": "",
+    "__9": "",
+    "__10": "",
+    "__11": "",
+    "__12": "",
+    "__13": "",
+    "__14": "",
+    "__15": "",
+    "__16": "",
+    "__17": "",
+    "__18": "",
+    "__19": "",
+    "__20": ""
+  },
+  {
+    "ID": 1008,
+    "NAME": "low carb keto pizza",
+    "IMAGE LINK": "https://img.taste.com.au/RHCTblOU/w720-h480-cfill-q80/taste/2018/12/low-carb-keto-friendly-pizza-145723-2.jpg",
+    "RECIPE LINK": "https://www.taste.com.au/recipes/low-carb-keto-friendly-pizza-recipe/cnzyga3p",
+    "DESCRIPTION": "Place the grated mozzarella, almond meal and cream cheese in a microwave-safe bowl. Microwave on HIGH (100%) for 1 minute, stirring halfway, or until melted and combined. Add the egg and working quickly, beat vigorously with a wooden spoon until combined.",
+    "": "",
+    "__1": "",
+    "__2": "",
+    "__3": "",
+    "__4": "",
+    "__5": "",
+    "__6": "",
+    "__7": "",
+    "__8": "",
+    "__9": "",
+    "__10": "",
+    "__11": "",
+    "__12": "",
+    "__13": "",
+    "__14": "",
+    "__15": "",
+    "__16": "",
+    "__17": "",
+    "__18": "",
+    "__19": "",
+    "__20": ""
+  },
+  {
+    "ID": 1009,
+    "NAME": "Smashed Brussels Sprouts",
+    "IMAGE LINK": "https://hips.hearstapps.com/del.h-cdn.co/assets/17/50/640x972/gallery-1513375271-delish-smashed-brussels-sprouts-pinterest-still003.jpg?resize=768:*",
+    "RECIPE LINK": "https://www.delish.com/cooking/recipe-ideas/recipes/a57237/smashed-brussels-sprouts-recipe/",
+    "DESCRIPTION": "Combine Brussels sprouts, olive oil, garlic minced, chopped thyme kosher salt, black pepper, mozzarella, parmesan,and chopped parsley",
+    "": "",
+    "__1": "",
+    "__2": "",
+    "__3": "",
+    "__4": "",
+    "__5": "",
+    "__6": "",
+    "__7": "",
+    "__8": "",
+    "__9": "",
+    "__10": "",
+    "__11": "",
+    "__12": "",
+    "__13": "",
+    "__14": "",
+    "__15": "",
+    "__16": "",
+    "__17": "",
+    "__18": "",
+    "__19": "",
+    "__20": ""
+  },
+  {
+    "ID": 1010,
+    "NAME": "Cauliflower hash brown",
+    "IMAGE LINK": "https://www.google.com/search?q=cauliflower+hash+brown+cups&rlz=1C1OKWM_enCA851CA854&sxsrf=ACYBGNQAzUvzOlYF8uQp9HvfPClHk6lzow:1579836747098&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjxl_TAppvnAhWCIDQIHe--DwoQ_AUoAnoECAwQBA&biw=1600&bih=757#imgrc=vM1Y8jhVcCGtSM:",
+    "RECIPE LINK": "https://www.delish.com/cooking/recipe-ideas/a46832/cauliflower-hash-brown-egg-cups/",
+    "DESCRIPTION": "Combine cauliflower, cheddar, eggs, garlic powder, salt, bacon,ground black pepper",
+    "": "",
+    "__1": "",
+    "__2": "",
+    "__3": "",
+    "__4": "",
+    "__5": "",
+    "__6": "",
+    "__7": "",
+    "__8": "",
+    "__9": "",
+    "__10": "",
+    "__11": "",
+    "__12": "",
+    "__13": "",
+    "__14": "",
+    "__15": "",
+    "__16": "",
+    "__17": "",
+    "__18": "",
+    "__19": "",
+    "__20": ""
+  }
+]
+
+function randomIntFromInterval(min, max) { // min and max included 
+      var myNumber = Math.floor(Math.random() * (max - min + 1) + min);
+     // console.log(myNumber);
+     //if the variable myNumber is equal to the recipe ID,then using jquery, replace the container div with the recipe name and image;
+     for (var key in recipes){
+        console.log(recipes[key]["ID"]);
+        if(myNumber == recipes[key]["ID"]){
+          $("#recipe-div").html('<a href="' + recipes[key]["RECIPE LINK"] + '">' + recipes[key]["NAME"] + '<img src="' + recipes[key]["IMAGE LINK"] + '">' + recipes[key]["DESCRIPTION"]);
+        }
+}
+    }
+
+    //next step is to add the recipe description and make the whole thing a clickable link to the recipe. HINT: think about the name and (key)
+
+
+
+    
+    </script>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn" id="btnClick">Interested?</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="About.html">About</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="Contact.html">Contact</a>
+  </div>
+</div>
+
+<div class="parent">
+<div class="container">
+
+  <p class="h1">Feeling hungry?<br /><button onclick="randomIntFromInterval(1001,1010)">Keto Me!</button></p>
+  <p id="demo"></p>
+  <div id="recipe-div" class="recipe"></div>
+  <img src="">
+
+</div>
+</div>
+
+
+</body>
+</html>
