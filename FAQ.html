@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+</head>
+<link href='https://fonts.googleapis.com/css?family=Chelsea Market' rel='stylesheet'>
+<style>
+  body {
+    background-color: #f1f1f1;
+    font-family: 'Chelsea Market';
+  }
+  h1 {
+    font-size: 50px;
+    font-family: 'Chelsea Market';
+  }
+  ul.a {
+    list-style-type: circle;
+  }
+  h2 {
+    font-size: 30px;
+    font-family: 'Chelsea Market';
+  }
+  h3 {
+    font-size: 30px;
+    font-family: 'Chelsea Market';
+  }
+  h4 {
+    font-size: 30px;
+    font-family: 'Chelsea Market';
+  }
+  .dropbtn {
+    background-color: #cc4125;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: white;
+  }
+  
+  .dropdown {
+    float: right;
+    position: relative;
+    display: block;
+    z-index: 9999 !important;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;} 
+  
+  .show {display: block;}
+  
+  </style>
+  </head>
+  <body>
+  
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn" id="btnClick">Interested?</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="index.html">Index</a>
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </div>
+  
+  <script>
+    
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        console.log("myfunc");
+      }
+      
+      $("#btnClick").on("click",function(){
+        console.log("myclick");
+          // var dropdowns = document.getElementsByClassName("dropdown-content");
+          // var i;
+          // for (i = 0; i < dropdowns.length; i++) {
+          //   var openDropdown = dropdowns[i];
+          //   if (openDropdown.classList.contains('show')) {
+          //     openDropdown.classList.remove('show');
+          //   }
+          // }
+      }) 
+  
+  </script>
+  
+  <center><h1>Get recipes with the click of a button!</h1></center>
+  
+  <ul class="a">
+  <li><h2>Being in ketosis sends ketones to burn stored fat!</h2></li>
+  <li><h3>Cauliflower can be a substitute for a lot of meals!</h3></li>
+  <li><h4>Make keto pizza!</h4></li>
+  </ul>
+  
+</body>
+</html>
